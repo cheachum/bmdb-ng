@@ -1,0 +1,29 @@
+<div class='component-content'>
+    <div class='lefthalf'>
+        <span class='component-title'>{{title}} </span>
+        <span><a routerLink='/credits/create'>
+                <img id='createnew' width='20' height='20' src='assets/add-icon.png' title='Add New'></a>
+        </span>
+    </div>
+</div>
+<p *ngIf='!credits'>Loading...</p>
+<table *ngIf='credits' class="table table-sm">
+    <tr>
+        <th> <a (click)="sortBy('id')">ID</a></th>
+        <th> Actor </th>
+        <th> Movie </th>
+        <th> Role </th>
+        <th> Action </th>
+    </tr>
+    <tbody>
+    <tr *ngFor="let c of credits |  sort:sortCriteria:sortOrder ">
+        <td>{{c.id}}</td>
+        <td>{{c.actor.firstName}} {{c.actor.lastName}}</td>
+        <td>{{c.movie.title}}</td>
+        <td>{{c.role}}</td>
+        <td><a routerLink='/credits/detail/{{c.id}}'><img src='assets\details.png' width='20' height='20' title='Detail'></a>  | <a routerLink='/credits/edit/{{c.id}}'><img src='assets/pencil-icon.png' width='20' height='20' title='Edit'></a></td>
+
+    </tr>
+</tbody>
+
+</table>

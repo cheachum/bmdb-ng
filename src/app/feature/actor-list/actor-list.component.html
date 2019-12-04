@@ -1,0 +1,22 @@
+<div class='component-content'>
+        <div class='lefthalf'>
+            <span class='component-title'>{{title}} </span>
+            <span><a routerLink='/actors/create'>
+                    <img id='createnew' width='20' height='20' src='assets/add-icon.png' title='Add New'></a>
+            </span>
+        </div>
+    </div>
+    <table class="table table-sm">
+        <tr>
+            <th> <a (click)="sortBy('id')">ID</a></th>
+            <th> <a (click)="sortBy('lastName')">Name</a> </th>
+            <th> Action </th>
+        </tr>
+        <tr *ngFor="let a of actors| sort:sortCriteria:sortOrder">
+            <td>{{a.id}}</td>
+            <td>{{a.firstName}} {{a.lastName}}</td>
+            <td><a routerLink='/actors/detail/{{a.id}}'><img src='assets\details.png' width='20' height='20' title='Detail'></a>  | <a routerLink='/actors/edit/{{a.id}}'><img src='assets/pencil-icon.png' width='20' height='20' title='Edit'></a> </td>
+    
+        </tr>
+    
+    </table>

@@ -1,0 +1,26 @@
+h1,.component-title{
+    text-align: center;
+    color:rgb(243, 248, 155);
+    font-family: Garamond;
+    Font-weight: absolute;
+    font-size: x-large;
+  
+}
+    
+
+body {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLlfYZwcGALf2fW8jyd4SbukO94pwLKB1ENgjtYvyh2G5gPz9SUA&s");
+    background-blend-mode: luminosity;
+    background-size: 100%;
+   
+}
+
+th, td, tr{
+    color:rgb(243, 248, 155);
+    font-family: Garamond;
+}
+
+th{
+    font-size: 20px;
+    padding:25px;
+}

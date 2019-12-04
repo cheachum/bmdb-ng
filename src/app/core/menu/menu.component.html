@@ -1,0 +1,9 @@
+<nav class ="nav justify-content-center"> 
+    <ul>
+        <li *ngFor="let mi of menuItems"title="{{mi.tooltip}}">
+            <a routerLink="{{mi.href}}">{{mi.display}}</a>
+        </li>
+
+    </ul>
+   
+</nav>
